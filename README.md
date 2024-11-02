@@ -1,6 +1,6 @@
 # JavaJam Coffee House
 
-Welcome to the JavaJam Coffee House project! This is a simple yet elegant website designed to showcase our coffee offerings, live music events, and more. Built using HTML, Bootstrap, and Font Awesome, this website is a great example of modern web design.
+Welcome to the JavaJam Coffee House project! This is a simple yet elegant website designed to showcase our coffee offerings, live music events, and more. Built using HTML, Bootstrap, and Font Awesome, this website is a great example of modern web design [TRY NOW](https://qyuzet.github.io/bootstrap-javajam/)
 
 ## Table of Contents
 
