@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaJam Coffee House</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      :root {
+        --primary-color: #6f4e37;
+        --secondary-color: #c4a484;
+        --light-color: #fdf6e3;
+      }
+
+      body {
+        background-color: var(--light-color);
+        font-family: "Inter", sans-serif;
+      }
+
+      .navbar {
+        background-color: var(--primary-color);
+      }
+
+      .hero-section {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("/api/placeholder/1200/400");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 100px 0;
+      }
+
+      .feature-card {
+        transition: transform 0.3s ease;
+        background: white;
+        border: none;
+        border-radius: 15px;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .nav-link {
+        color: var(--light-color) !important;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-link:hover {
+        color: var(--secondary-color) !important;
+      }
+
+      .footer {
+        background-color: var(--primary-color);
+        color: var(--light-color);
+      }
+
+      /* New styles for drink images */
+      .drink-image-container {
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .drink-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-coffee me-2"></i>
+          JavaJam
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#music">Music</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#jobs">Jobs</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+      <div class="container">
+        <h1 class="display-4 mb-4">Follow the Winding Road to JavaJam</h1>
+        <p class="lead mb-4">
+          Indulge in our locally roasted free-trade coffee and home-made
+          pastries.
+        </p>
+        <a href="#menu" class="btn btn-light btn-lg">View Menu</a>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="feature-card card h-100 shadow-sm p-4">
+              <div class="text-center mb-3">
+                <i class="fas fa-mug-hot fa-3x text-primary"></i>
+              </div>
+              <h5 class="card-title text-center">Specialty Coffee</h5>
+              <p class="card-text text-center">
+                Premium locally roasted coffee and artisanal tea selection
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="feature-card card h-100 shadow-sm p-4">
+              <div class="text-center mb-3">
+                <i class="fas fa-bread-slice fa-3x text-primary"></i>
+              </div>
+              <h5 class="card-title text-center">Fresh Pastries</h5>
+              <p class="card-text text-center">
+                Bagels, muffins, and organic snacks baked daily
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="feature-card card h-100 shadow-sm p-4">
+              <div class="text-center mb-3">
+                <i class="fas fa-music fa-3x text-primary"></i>
+              </div>
+              <h5 class="card-title text-center">Live Music</h5>
+              <p class="card-text text-center">
+                Music and poetry readings every weekend
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="feature-card card h-100 shadow-sm p-4">
+              <div class="text-center mb-3">
+                <i class="fas fa-microphone fa-3x text-primary"></i>
+              </div>
+              <h5 class="card-title text-center">Open Mic</h5>
+              <p class="card-text text-center">
+                Share your talent at our weekly open mic nights
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Preview Section -->
+    <section class="bg-white py-5" id="menu">
+      <div class="container">
+        <h2 class="text-center mb-5">Our Popular Drinks</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="drink-image-container">
+                <img
+                  src="https://operatorcoffee.com/cdn/shop/files/Opo_Decaf_Wholebean_771x1000.png?v=1696339421"
+                  class="drink-image"
+                  alt="Just Java"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Just Java</h5>
+                <p class="card-text">
+                  Regular house blend, decaffeinated coffee, or flavor of the
+                  day.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Endless Cup $2.00</small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="drink-image-container">
+                <img
+                  src="https://131340465.cdn6.editmysite.com/uploads/1/3/1/3/131340465/s196254156684441514_p1067_i1_w4029.jpeg?width=2560&optimize=medium"
+                  class="drink-image"
+                  alt="Cafe au Lait"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Cafe au Lait</h5>
+                <p class="card-text">
+                  House blended coffee infused with steamed milk.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Single $2.00 | Double $3.00</small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="drink-image-container">
+                <img
+                  src="https://www.sustainablecooks.com/wp-content/uploads/2019/04/blended-iced-coffee-9.jpg"
+                  class="drink-image"
+                  alt="Iced Cappuccino"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Iced Cappuccino</h5>
+                <p class="card-text">
+                  Sweetened espresso blended with icy-cold milk.
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">Single $4.75 | Double $5.75</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Music Events Section -->
+    <section class="py-5" id="music">
+      <div class="container">
+        <h2 class="text-center mb-5">Upcoming Performances</h2>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="/images/melanie.jpg"
+                    class="img-fluid rounded-start"
+                    alt="Melanie Morris"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Melanie Morris</h5>
+                    <p class="card-text">Melodic folk style performance</p>
+                    <p class="card-text">
+                      <small class="text-muted">January | 8pm - 11pm</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="card h-100 border-0 shadow-sm">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="/images/greg.jpg"
+                    class="img-fluid rounded-start"
+                    alt="Tahoe Greg"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">Tahoe Greg</h5>
+                    <p class="card-text">
+                      New songs and stories from his latest tour
+                    </p>
+                    <p class="card-text">
+                      <small class="text-muted">February | 8pm - 11pm</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start">
+            <p class="mb-0">54321 Route 42, Ellison Bay, WI 54210</p>
+            <p class="mb-0">1-888-555-5555</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <p class="mb-0">&copy; 2024 JavaJam Coffee House</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
